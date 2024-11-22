@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Amazon</title>
+    <link rel="stylesheet" href="./amazon.css">
+    <link rel="icon" href="data:image/png;base64,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">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+<body>
+
+    <header class="header">
+        <nav class="nav">
+            <div class="brdr">
+                <div class="icon"></div>
+            </div>
+         
+       
+        
+        <div class="add border">
+            <p>Deliver to udupi</p>
+
+            <div class="location">
+                <i class="fa-solid fa-location-dot"></i>
+                <h4>Update Location</h4>
+                
+            </div>
+        </div>
+
+        <div class="search">
+            <select>
+                
+                <option>All</option> 
+            </select>
+
+            <input class="inp" type="text" placeholder="Search Amazon.in">
+            <div class="search_icon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+        </div>
+
+       <div class="sign_in border below">
+        <p>Hello, sign in</p>
+        <h3>Account&List</h3>
+       </div>
+
+       <div class="return border below">
+        <p>Return</p>
+        <h3>& Orders</h3>
+       </div>
+
+       <div class="cart border">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <h4>Cart</h4>
+       </div>
+     </nav>
+
+     
+    </header>
+
+   <section class="second_border">
+    <div class="all_icon">
+    <div class="all"><i class="fa-solid fa-list"></i></div>
+    <h3 class="all_1">All</h3>
+    </div>
+
+
+    <div class="mini">
+    <p>Amazon miniTv</p>
+    
+    </div>
+
+    <div class="mini">
+        <p>Sell</p>
+    </div>
+
+    <div class="mini">
+        <p> Best Seller</p>
+    </div>
+
+
+    <div class="mini">
+        <p> Todays Deal</p>
+    </div>
+
+
+    <div class="mini">
+        <p>Mobile</p>
+    </div>
+
+    <div class="mini">
+        <p>prime</p>
+    </div>
+
+    <div class="mini">
+        <p>Customer Service</p>
+    </div>
+
+    <div class="mini">
+        <p>Electronics</p>
+    </div>
+
+    <div class="mini">
+        <p>Home & Kitchen</p>
+    </div>
+
+    <div class="fest">
+
+
+    </div>
+
+    <div class="festival ">
+        <h4>GREAT INDIAN FESTIVAL</h4>
+        <H1>DEALS REVEALED</H1>
+
+        
+    </div>
+
+   </section>
+
+
+    <div class="img">
+        
+    </div>
+
+   <div class="main">
+    <div class="box1" >
+        <h2>Up to 80% off | Electronics & accessories</h2>
+        <div></div>
+        <p class="offers"> see all</p>
+    </div>
+
+    
+        <div class="box2">
+        <h2>Up to 50% off | Electronics & accessories</h2>
+        <div></div>
+        <p class="offers">see all</p> 
+    </div>
+
+      <div class="box3">
+        <h2>Starting ₹299 | Latest styles from top brands</h2>
+        <div></div>
+        <p class="offers">see all details</p>
+      </div>
+
+      <div class="box4">
+        <h2>Up to 75% off | Never before offers on appliances</h2>
+        <div></div>
+        
+        <p class="offers">see all offers</p>
+
+      </div>
+
+    </div>
+
+    <div class="main1">
+        <div class="main1_heading">
+        <h2>Starting ₹399 | Deals on Amazon brands & more</h2>
+        <p>see all deals</p>
+        </div>
+
+<div class="main_img">
+
+    <div class="main_img1"></div>
+    <div class="main_img2"></div>
+    <div class="main_img3"></div>
+    <div class="main_img4"></div>
+    <!-- <div class="main_img5"></div> -->
+    
+</div>
+
+
+     </div>
+
+
+     <div class="fourth_box">
+        <div class="fourbox_heading">
+            <h2>Starting ₹89 | Deals on mobile accessories</h2>
+            <p>Explore more</p>
+
+        </div>
+
+        <div class="box_head">
+<div> 
+    <div class="fourthbox_img">  </div>  
+    <p class="p_detail">Redmi 13C 5G</p>
+</div>
+       
+      <div>
+        <div class="fourthbox_img1"></div>
+        <p class="p_detail">Galaxy M35 5G</p>
+
+    </div>
+
+
+    <div>
+        <div class="fourthbox_img2"></div>
+        <p class="p_detail">Tenco POVAS 6 NEO</p>
+    </div>
+
+
+    <div>
+        <div class="fourthbox_img3"></div>
+        <p class="p_detail">realme NARZO 75Pro 5G</p>
+    </div>
+
+
+    <div>
+        <div class="fourthbox_img4"></div>
+        <p class="p_detail">Motorola razr 50ultra</p>
+    </div>
+
+
+     <div>
+        <div class="fourthbox_img5"></div>
+        <p class="p_detail">HMD crest 5G</p>
+    </div>
+
+
+
+        </div>
+
+     </div>
+
+     <!-- --------------------------------------------------------------------- -->
+         <!-- ----5th_box---- -->
+
+     <div class="fifth_box">
+        <div class="fifth_box_heading">Blockbuster Deals | Ends Oct 29</div>
+
+    <div class="fifth_box_img">
+
+        <div class="fifth_boxing">
+            <div class="fifth_details">
+                <div class="discount_detail">
+                <div class="discount"> 50% off</div>
+                <p class="limit">limited time deal</p>
+                
+                </div>
+                <p class="mobile_detail">boAt Airdopes 311 Pro Truly Wireless in Ear Ear Buds w/Upto 50 HRS Playtime,</p>
+            </div>
+        
+        </div>
+
+
+
+        <div class="fifth_boxing1">
+            <div class="fifth_detail_1">
+                <div class="discount_detail_1">
+                    <div class="discount_1">50% off</div>
+                    <p class="limited">limited time deal</p>
+                </div>
+
+                <p class="pro_detail">Samsung 163 cm (65 inches) 4K Ultra HD Smart QLED TV QA65Q70DAULXL (Titan Gray)</p>
+            </div>
+        
+        </div>
+
+
+
+
+        <div class="fifth_boxing2">
+            <div class="fifth_detail_2">
+                <div class="discount_detail_2">
+                    <div class="discount_2">50% off</div>
+                    <p class="limited">limited time deal</p>
+                </div>
+
+                <p class="p_detail1">Fastrack Fpods FZ100 TWS in-Ear Earbuds with Mega 50 Hrs Playtime|Extra Deep Bass Driver</p>
+            </div>
+        
+        </div>
+
+
+
+
+        <div class="fifth_boxing3">
+            <div class="fifth_detail_3">
+                <div class="discount_detail_3">
+                    <div class="discount_3">50% off</div>
+                    <p class="limited">limited time deal</p>
+                </div>
+
+                <p class="p_detail2">Samsung Galaxy S23 Ultra 5G AI Smartphone (Green, 12GB, 256GB Storage)</p>
+            </div>
+
+
+
+        
+        </div>
+
+
+
+
+
+        <div class="fifth_boxing4">
+            <div class="fifth_detail_4">
+                <div class="discount_detail_4">
+                    <div class="discount_4">50% off</div>
+                    <p class="limited">limited time deal</p>
+                </div>
+
+                <p class="p_detail3">boAt BassHeads 225 in-Ear Super Extra Bass Wired Headphones, with Mic (Black)</p>
+            </div>
+
+        
+        </div>
+
+
+
+
+    </div>
+
+     </div>
+
+
+
+     <!-- ---------6th_box------------ -->
+
+
+
+     <div class="six_box">
+
+        
+
+        <div class="sixth_child"> 
+            <div class="sixth">
+            <h2>Up to 75% off | A wide range of electronics & accessories from Small businesses</h2>
+            <p class="p_p">see all offers</p>
+            </div>
+
+
+        <div class="sixth_one">
+            <div class="sixth_images">
+    
+            </div>
+
+
+            <div class="sixth_images1">
+        
+            </div>
+
+            <div class="sixth_images2">
+        
+            </div>
+
+            <div class="sixth_images3">
+        
+            </div>
+
+
+            <div class="sixth_images4">
+        
+            </div>
+
+        </div>
+
+        </div>
+    </div>
+
+<!-- ---------------------------------------------------------------------------------------- -->
+<!-- -----------7th_b0x--------- -->
+
+        <div class="seventh_box">
+            <div class="seventh">
+            <div class="seventh_child">
+
+                <div class="seventh_child1">
+                </div>
+
+                <div class="child1_details">
+                    <p>BLUEWUD Kyvid Large Engineering Wood Wall Mount TV Entertainment Unit Set Top Box Stand/TV Cabinet with Shelves for Books & Décor Display Unit Large Upto 50 Inches (Wenge)</p>
+                    <div class="deal_details">limited time Deal</div>
+                    <h2 >₹ 1,549</h2>
+                    <p>M.R.P: ₹ 3,999.00  -61%</p>
+                </div>
+                
+               
+                    
+                </div>
+
+
+
+               
+                    
+            </div>
+           </div>
+
+
+ <!-- ---------------------------------------------------------------------------------------- -->
+  <!-- -----8th_box----- -->
+    <div class="eighth_child1">
+
+        <div class="eighth_img">
+            <div class="eighth_detail">
+                <span>
+                    <h4 >Spigen Liquid Air Back Cover Case Compatible with Galaxy S21 Ultra (TPU | Abyss Green)</h4>
+
+
+                </span>
+                <p>Visit the spigen store</p>
+                <h3>₹1,499.00</h3>
+                <p>(₹749.50 / count)</p>
+                <p>FREE Delivery by Amazon</p>
+
+
+            </div>
+        </div>
+       
+
+
+
+        <div class="eighth_img1">
+            <div class="eighth_detail1">
+                <span>
+                <h4 >Spigen Optik Armor Back Cover Case Compatible with Galaxy S23 Ultra (TPU + Poly Carbonate | Abyss Green)</h4>
+                </span>
+                <p>Visit the spigen store</p>
+                <h3>₹1,957.00</h3>
+                <p>(₹800.50 / count)</p>
+                <p>FREE Delivery </p>
+
+
+            </div>
+        </div>
+
+
+
+        <div class="eighth_img2">
+            <div class="eighth_detail2">
+                <span>
+                <h4 >Portronics Adapto 45 22.5W Mach Usb&Type-C Dual Output Super Fast Charger,Wall Adapter Power Delivery 3.0</h4>
+               </span>
+                <p>Visit the spigen store</p>
+                <h3>₹1,200.00</h3>
+                <p>(₹350.00 / count)</p>
+                <p>FREE Delivery </p>
+
+
+            </div>
+        </div>
+
+
+
+
+        <div class="eighth_img3">
+            <div class="eighth_detail3">
+                <span>
+                <h4 >Spigen Optik Armor Back Cover Case Compatible with Galaxy S20 Ultra (TPU + Poly Carbonate | Abyss Green)</h4>
+                </span>
+                <p>Visit the spigen store</p>
+                <h3>₹1,200.00</h3>
+                <p>(₹350.00 / count)</p>
+                <p>FREE Delivery </p>
+
+
+            </div>
+        </div>
+
+
+
+
+        <div class="eighth_img4">
+            <div class="eighth_detail4">
+                <span>
+                <h4 >Spigen Optik Armor Back Cover Case Compatible with Galaxy S22 Ultra (TPU + Poly Carbonate | Abyss Green)</h4>
+                </span>
+                <p>Visit the spigen store</p>
+                <h3>₹1,200.00</h3>
+                <p>(₹350.00 / count)</p>
+                <p>FREE Delivery </p>
+
+
+            </div>
+        </div>
+
+    </div>
+    
+
+     <footer class="foot">
+
+
+        <div class="line">     
+               <h3 class="foot1">Already a customer? Sign in</h3>
+        </div>
+        <pre>Conditions of use   privacy Notice Interest-Based Ads</pre>
+        <p>&copy;1996-2024,Amazon.com,Inc.and its affiliates</p>
+
+
+     </footer>  
+
+        
+
+        
+
+    
+
+     
+
+
+    
+    
+   
+    
+</body>
+</html>
+
+
